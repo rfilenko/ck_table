@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="cz">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid top-section">
+      <div class="row">
+        <div class="col-md-4 orange-box">
+          <div class="row">
+            <div class="col-md-12">
+            <div class="form-group row first-part"> <!-- 1st part -->
+              <label for="zacatek" class="col-4 col-form-label">Začatek od</label>
+              <label for="navrat" class="col-4 col-form-label">Návrat do</label>
+              <label for="data-od" class="col-3 col-form-label">Délka od </label>
+              <label for="data-od" class="col-1 col-form-label"><span>do</span></label>
+              <div class="col-4">
+                <input class="form-control" type="date" value="2017-04-15" id="zacatek">
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="date" value="Datum" id="navrat">
+              </div>
+              <div class="col-2">
+                <input class="form-control" type="number" value="1" id="data-od">
+              </div>
+              <div class="col-2">
+                <input class="form-control" type="number" value="" id="data-do">
+              </div>
+            </div>
+            <div class="form-group row second-part"> <!-- 2nd part -->
+              <label for="castka-od" class="col-4 col-form-label">Cena od</label>
+              <label for="castka-do" class="col-4 col-form-label">do</label>
+              <label for="sleva" class="col-4 col-form-label">Sleva od </label>
+              <div class="col-4">
+                <input class="form-control" type="text" placeholder="Částka" id="castka-od">
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="text" placeholder="Částka" id="castka-do">
+              </div>
+              <div class="col-4">
+                <input class="form-control text-right" type="text" placeholder="%" id="sleva">
+              </div>
+              <div class="col-4 radio-btns">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    Vsechny
+                  </label>
+                </div>
+              </div>
+              <div class="col-4 radio-btns">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="fminute">
+                    First minute
+                  </label>
+                </div>
+              </div>
+              <div class="col-4 radio-btns">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="lminute">
+                    Last minute
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row third-part"> <!-- 3rd part -->
+              <div class="col-4">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="pocty-osob"> Počty osob
+                  </label>
+                </div>
+              </div>
+              <div class="col-2">
+              </div>
+              <div class="col-6">
+                <label class="col-12 col-form-label"><a href="">Podporované kanceláře</a></label>
+              </div>
+              <label for="dospelit" class="col-4 col-form-label muted">Dospělých</label>
+              <label for="deti" class="col-4 col-form-label muted">Děti</label>
+              <label for="vek" class="col-4 col-form-label muted">Věk děti </label>
+              <div class="col-4 muted">
+                <input class="form-control" type="text" placeholder="0 až 8" id="dospeli">
+              </div>
+              <div class="col-4 muted">
+                <input class="form-control" type="text" placeholder="0 až 4" id="deti">
+              </div>
+              <div class="col-4 muted">
+                <input class="form-control" type="text" placeholder="0" id="vek">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 grey-box box-2">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row top-header"> <!-- top part -->
+                <div class="col-6">
+                  <div class="form-check">
+                    <label class="col-12 col-form-label">Cestovní kanceláře</label>
+                  </div>
+                </div>
+                <div class="col-6 text-right">
+                  <label class="col-12 col-form-label"><a href="">Změnit předvolené</a></label>
+                </div>
+                <div class="col-12" id="kancelare" >
+                  <select class="form-control">
+                    <option>Vybráno 274 predvolených</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row middle-part"> <!-- middle part -->
+                <div class="col-6">
+                  <div class="form-check">
+                    <label class="col-12 col-form-label">Země a destinace</label>
+                  </div>
+                </div>
+                <div class="col-12" id="kancelare" >
+                  <select class="form-control">
+                    <option>Kypr, Maledivy/ Baa Atoll</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row bottom-part-1"> <!-- 1st part -->
+                <label for="nazev-hotelu" class="col-8 col-form-label">Nazev hotelu</label>
+                <label for="cislo-hotelu" class="col-4 col-form-label">Cislo hotelu</label>
+                <div class="col-8">
+                  <input class="form-control" type="text" id="nazev-hotelu">
+                </div>
+                <div class="col-4">
+                  <input class="form-control" type="text" id="cislo-hotelu">
+                </div>
+              </div>
+              <div class="form-group row bottom-part-2"> <!-- 2nd part -->
+                <label for="typ" class="col-4 col-form-label">Typ ubytovani</label>
+                <label for="kategorie" class="col-4 col-form-label">Kategorie</label>
+                <label for="hodnoceni" class="col-4 col-form-label">Hodnoceni</label>
+                <div class="col-4">
+                  <select class="form-control">
+                    <option>Karavan</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <select class="form-control">
+                    <option>4 <i class="fa fa-star" aria-hidden="true"></i> a 5 <i class="fa fa-star" aria-hidden="true"></i></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <select class="form-control">
+                    <option>Nad 80%</option>
+                    <option>Nad 60%</option>
+                    <option>Nad 20%</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row bottom-part-3"> <!-- 3rd part -->
+                <label for="parametry" class="col-4 col-form-label">Parametry</label>
+                <label for="more" class="col-4 col-form-label">Moře</label>
+                <label for="sjezdovka" class="col-4 col-form-label">Sjezdovka</label>
+                <div class="col-4">
+                  <select class="form-control">
+                    <option>WiFi</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-4">
+                  <input class="form-control text-right" type="text" placeholder="m" id="more">
+                </div>
+                <div class="col-4">
+                  <input class="form-control text-right" type="text" placeholder="m" id="sjezdovka">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 grey-box box-3">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row"> <!-- 1st part -->
+                <label for="strava" class="col-6 col-form-label">Strava</label>
+                <label for="doprava" class="col-6 col-form-label">Doprava</label>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option>Vše</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option>Vše</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row"> <!-- 2nd part -->
+                <label for="letiste" class="col-6 col-form-label">Letiště</label>
+                <label for="odjezdy" class="col-6 col-form-label">Odjezdy</label>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option>Vše</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option>Vše</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row"> <!-- 3rd part -->
+                <label for="typ-zajezdu" class="col-6 col-form-label">Typ zájezdu</label>
+                <label for="cislo-terminu" class="col-6 col-form-label">Číslo termínu</label>
+                <div class="col-6">
+                  <select class="form-control">
+                    <option>Vše</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <input class="form-control" type="date" value="" id="cislo-terminu">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid btn-section">
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <button type="button" class="btn btn-sbalit">Sbalit <i class="fa fa-caret-up" aria-hidden="true"></i></button>
+        </div>
+        <div class="col-md-4 col-xs-12 text-center">
+          <button type="button" class="btn btn-hledani btn-lg">Hledat zájezdy</button>
+        </div>
+        <div class="col-md-4 col-xs-12 text-right">
+          <button type="button" class="btn btn-right">
+            <i class="fa fa-globe" aria-hidden="true"></i> Připnout k připadu
+          </button>
+          <button type="button" class="btn btn-right">
+            <i class="fa fa-refresh" aria-hidden="true"></i> Vynulovat
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid table-section">
+      <div class="ribbon">
+        <h3 href="">325 zajezdu</h3>
+        <ul class="tabs">
+          <li><p><a href="">Po stopách Shac... <i class="fa fa-times" aria-hidden="true"></i></a></p></li>
+          <li><p><a href="">Spa Hotel Term <i class="fa fa-times" aria-hidden="true"></i></a></p></li>
+          <li><p><a href="">Ibis Styles Krabi... <i class="fa fa-times" aria-hidden="true"></i></a></i></p></li>
+      </ul>
+      <ul class="icons">
+        <li><a href=""><i class="fa fa-book fa-2x" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-list fa-2x" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></i></li>
+    </ul>
+    </div>
+      <table class="table table-hover">
+        <thead class="thead">
+          <tr>
+            <th><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label>
+            </th>
+            <th>Dost.</th>
+            <th>ID</th>
+            <th>CK</th>
+            <th>Typ</th>
+            <th>Stát</th>
+            <th>Destinace</th>
+            <th>Hodn.</th>
+            <th>Hotel</th>
+            <th>Datum</th>
+            <th>Délka</th>
+            <th>Strava</th>
+            <th>Dopra.</th>
+            <th>Vzd.</th>
+            <th>Pokoje</th>
+            <th>Sleva</th>
+            <th>Cena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle  fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Viva Travel</td>
+            <td>PZN</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 86%</td>
+            <td>Po stopách Shackeltona - 20 dní...</td>
+            <td>8.3.17</td>
+            <td>20 dní</td>
+            <td>PP</td>
+            <td><i class="fa fa-train" aria-hidden="true"></i> PRG</td>
+            <td>300 m</td>
+            <td>1+0, 2+</td>
+            <td>20%</td>
+            <td>12 500 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i></td>
+            <td>114161677</td>
+            <td>AJV Přibram</td>
+            <td>LAZ</td>
+            <td>Slovensko</td>
+            <td>Západní Slovensko</td>
+            <td><i class="fa fa-square" aria-hidden="true"></i> 76%</td>
+            <td>Hotel Park, Pieštány, Slovensko...</td>
+            <td>21.3.17</td>
+            <td>4 dny</td>
+            <td>PL</td>
+            <td><i class="fa fa-circle-o-notch" aria-hidden="true"></i> VLA</td>
+            <td>1,4 km</td>
+            <td>2+1</td>
+            <td>15%</td>
+            <td>5 000 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-phone fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Time travel</td>
+            <td>MOR</td>
+            <td>Maledivy</td>
+            <td>Jižní Male Atoll</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 95%</td>
+            <td>Holiday Inn kandooma 4*</td>
+            <td>22.3.17</td>
+            <td>10 dni</td>
+            <td>SN</td>
+            <td><i class="fa fa-car" aria-hidden="true"></i> VIE</td>
+            <td>10 km</td>
+            <td>2+1</td>
+            <td></td>
+            <td>6 800 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i></td>
+            <td>105461579</td>
+            <td>Mauthner CK</td>
+            <td>LAZ</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square-bad" aria-hidden="true"></i> 25%</td>
+            <td>Po stopách Shackeltona - 20 dní...</td>
+            <td>28.3.17</td>
+            <td>3 dní</td>
+            <td>BS</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VIE</td>
+            <td>5 km</td>
+            <td>1+0, 2+</td>
+            <td></td>
+            <td>63 900 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i></td>
+            <td>114161611</td>
+            <td>Geovita</td>
+            <td>SEN</td>
+            <td>Slovensko</td>
+            <td>Západní Slovensko</td>
+            <td><i class="fa fa-square square-bad" aria-hidden="true"></i> 46%</td>
+            <td>Hotel Park, Pieštány, Slovensko...</td>
+            <td>8.3.17</td>
+            <td>5 dní</td>
+            <td>PP</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> PRG</td>
+            <td>150 km</td>
+            <td></td>
+            <td>10%</td>
+            <td>12 5000 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-phone fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Viva Travel</td>
+            <td>MOR</td>
+            <td>Maledivy</td>
+            <td>Jižní Male Atoll</td>
+            <td data-toggle="tooltip" data-placement="bottom"
+            title="Mé vlastní hodnocení...">
+              <i class="fa fa-list-ul" aria-hidden="true"></i> 100%
+            </td>
+
+            <td>Holiday Inn kandooma 4*</td>
+            <td>21.3.17</td>
+            <td>20 dni</td>
+            <td>PL</td>
+            <td><i class="fa fa-circle-o-notch" aria-hidden="true"></i> VIE</td>
+            <td>50 m</td>
+            <td>2+1</td>
+            <td></td>
+            <td>5 000 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle  fa-2x" aria-hidden="true"></i></td>
+            <td>11416167</td>
+            <td>AJV Pribram</td>
+            <td>LYZ</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 95%</td>
+            <td>Po stopách Shackeltona - 20 dní...</td>
+            <td>22.3.17</td>
+            <td>4 dny</td>
+            <td>SN</td>
+            <td><i class="fa fa-train" aria-hidden="true"></i> VIE</td>
+            <td>5,5 km</td>
+            <td>2+1</td>
+            <td></td>
+            <td>6 800 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-phone fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Time travel</td>
+            <td>PZN</td>
+            <td>Slovensko</td>
+            <td>Západní Slovensko</td>
+            <td><i class="fa fa-square square" aria-hidden="true"></i> 65%</td>
+            <td>Hotel Park, Pieštány, Slovensko...</td>
+            <td>28.3.17</td>
+            <td>10 dní</td>
+            <td>BS</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VIE</td>
+            <td>300 m</td>
+            <td></td>
+            <td></td>
+            <td>63 900 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i></td>
+            <td>114161677</td>
+            <td>Mauthner CK</td>
+            <td>LAZ</td>
+            <td>Maledivy</td>
+            <td>Jižní Male Atoll</td>
+            <td data-toggle="tooltip" data-placement="bottom"
+            title="Mé vlastní hodnocení...">
+              <i class="fa fa-list-ul" aria-hidden="true"></i> 100%</td>
+            <td>Holiday Inn kandooma 4*</td>
+            <td>8.3.17</td>
+            <td>3 dny</td>
+            <td>PP</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VLA</td>
+            <td>1,4 km</td>
+            <td>1+0, 2+</td>
+            <td>30%</td>
+            <td>12 500 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Geovita</td>
+            <td>MOR</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 76%</td>
+            <td>Po stopách Shackeltona - 20 dní...</td>
+            <td>21.3.17</td>
+            <td>5 dní</td>
+            <td>PL</td>
+            <td><i class="fa fa-circle-o-notch" aria-hidden="true"></i> VLA</td>
+            <td>10 km</td>
+            <td>2+1</td>
+            <td></td>
+            <td>5 000 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i></td>
+            <td>105461579</td>
+            <td>Viva Travel</td>
+            <td>LAZ</td>
+            <td>Slovensko</td>
+            <td>Západní Slovensko</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 95%</td>
+            <td>Hotel Park, Pieštány, Slovensko...</td>
+            <td>22.3.17</td>
+            <td>20 dní</td>
+            <td>SN</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> PRG</td>
+            <td>5 km</td>
+            <td>2+1</td>
+            <td>15%</td>
+            <td>6 800 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-phone fa-2x" aria-hidden="true"></i></td>
+            <td>11416162</td>
+            <td>AJV Přibram</td>
+            <td>SEN</td>
+            <td>Maledivy</td>
+            <td>Jižní Male Atoll</td>
+            <td data-toggle="tooltip" data-placement="bottom"
+            title="Mé vlastní hodnocení...">
+              <i class="fa fa-list-ul" aria-hidden="true"></i> 80%</td>
+            <td>Holiday Inn kandooma 4*</td>
+            <td>28.3.17</td>
+            <td>4 dny</td>
+            <td>BS</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VIE</td>
+            <td>150 m</td>
+            <td>1+0, 2+</td>
+            <td>15%</td>
+            <td>63 900 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-hourglass-o fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Time travel</td>
+            <td>MOR</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 86%</td>
+            <td>Po stopách Shackeltona - 20 dní...</td>
+            <td>8.3.17</td>
+            <td>10 dní</td>
+            <td>PP</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VIE</td>
+            <td>50 m</td>
+            <td>2+1</td>
+            <td></td>
+            <td>12 500 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-hourglass-o fa-2x" aria-hidden="true"></i></td>
+            <td>114161677</td>
+            <td>Mauthner CK</td>
+            <td>LYZ</td>
+            <td>Slovensko</td>
+            <td>Západní Slovensko</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 76%</td>
+            <td>Hotel Park, Pieštány, Slovensko...</td>
+            <td>21.3.17</td>
+            <td>3 dny</td>
+            <td>PL</td>
+            <td><i class="fa fa-circle-o-notch" aria-hidden="true"></i> VLA</td>
+            <td>5,4 km</td>
+            <td>2+1</td>
+            <td></td>
+            <td>5 000 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-hourglass-o fa-2x" aria-hidden="true"></i></td>
+            <td>99503106</td>
+            <td>Geovita</td>
+            <td>PZN</td>
+            <td>Maledivy</td>
+            <td>Jižní Male Atoll</td>
+            <td><i class="fa fa-square square-great" aria-hidden="true"></i> 95%</td>
+            <td>Holiday Inn kandooma 4*</td>
+            <td>22.3.17</td>
+            <td>5 dní</td>
+            <td>SN</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> PRG</td>
+            <td>300 m</td>
+            <td></td>
+            <td>20%</td>
+            <td>6 800 Kč</td>
+          </tr>
+          <tr>
+            <th scope="row"><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label></th>
+            <td><i class="fa fa-hourglass-o fa-2x" aria-hidden="true"></i></td>
+            <td>114161677</td>
+            <td>Viva Travel</td>
+            <td>LAZ</td>
+            <td>Antarktida</td>
+            <td>Antarktida</td>
+            <td><i class="fa fa-square square" aria-hidden="true"></i> 65%</td>
+            <td>Po stopách Shackeltona</td>
+            <td>28.3.17</td>
+            <td>20 dní</td>
+            <td>BS</td>
+            <td><i class="fa fa-plane" aria-hidden="true"></i> VIE</td>
+            <td>1,4 km</td>
+            <td></td>
+            <td></td>
+            <td>63 900 Kč</td>
+          </tr>
+        </tbody>
+        <tfoot class="tfoot">
+          <tr>
+            <th><label class="form-check-label">
+              <input class="form-check-input" type="checkbox">
+            </label>
+            </th>
+            <th class="footer-blue"><a href="">Vše</a></th>
+            <th class="footer-blue" colspan="2"><a href="">
+              <i class="fa fa-folder fa-2x" aria-hidden="true"></i> Vybrané do schránky</a></th>
+            <th  class="footer-blue bold" colspan="3"><a href="">
+                <i class="fa fa-globe fa-2x" aria-hidden="true"></i> Vybrané k připadu</a></th>
+            <th  class="footer-blue"  colspan="2"><a href="">
+              <i class="fa fa-thumb-tack fa-2x" aria-hidden="true"></i> Vybrané k Axelerátoru</a></th>
+            <th  class="footer-blue"  colspan="3"><a href="">
+              <i class="fa fa-print fa-2x" aria-hidden="true"></i> Připravit pro tisk</a></th>
+            <th colspan="3"><p><span>1 - 30</span> z celkem 5 147 405</p></th>
+            <th colspan="2">
+              <div class="styleSelect">
+                <select class="form-control" >
+                    <option selected>50 na stránku </option>
+                    <option>100 na stránku</option>
+                    <option>150 na stránku</option>
+              </div>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <!--  Pagination -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-3">
+          <nav id="pagination" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <div class="btn btn-next footer-blue" tabindex="-1">Předhozi</div>
+              </li>
+                <li class="page-item"><input type="number" placeholder="1"></li>
+              <li class="page-item">z 25</li>
+              <li class="page-item">
+                <div class="btn btn-next footer-blue">Následující</div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+        // enabling tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // checkbox changing on checked
+        $("input[type='checkbox']").change(function() {
+          if(this.checked) {
+              $(this).parents('tr').toggleClass("selected");
+              $('.table td').css("padding", '0.5rem');
+          } else {
+            $(this).parents('tr').toggleClass("selected");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
