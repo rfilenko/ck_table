@@ -1,12 +1,27 @@
 /* General styles */
 
 body {
-  font-size: 12px;
+  font-size: 12.8px;
+  font-family: Arial,sans-serif;
 }
 .form-control {
-  font-size: .69rem;
+  font-size: 12.8px;
+  font-weight: 500;
   color: #000;
   padding: 0.5rem;
+  height: 36px;
+}
+select {
+  font-family: 'FontAwesome', Arial;
+}
+.calendar-icon {
+    float: right;
+    font-size: 18px;
+    margin-right: 8px;
+    margin-top: -28px;
+    position: relative;
+    z-index: 2;
+    color: #808080;
 }
 /* .Top-section  */
 .top-section {
@@ -15,7 +30,7 @@ body {
 }
 label {
   font-weight: 500;
-  color: #9A9A9A;
+  color: #4d4d4d;
 }
 .orange-box {
   background-color: #FFEEA8;
@@ -61,7 +76,10 @@ input[type="date" i] {
     width:100px;
 }
 .third-part {
-  padding: 1em 0 5em;
+  margin-top: -1em;
+}
+.third-part .form-check {
+  margin-top: 0.2em;
 }
 .radio-btns {
   margin-top: 2em;
@@ -76,6 +94,9 @@ input[type="date" i] {
 }
 #more, #sjezdovka {
   padding-bottom: 1.1em;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.1rem + 2px);
 }
 /* .Box-3 */
 .box-3 .row {
@@ -104,7 +125,9 @@ input[type="date" i] {
   margin-top: -1.8em;
 }
 .btn-hledani {
-  background-color: #00AB43;
+  background-color: #00aa44;
+  font-size: 12.8px;
+  height: 53.3px;
   color: #fff;
   padding: 1.1rem 2.6rem;
   font-weight: bold;
@@ -198,7 +221,7 @@ input[type="date" i] {
  /* .Ribbon */
 .ribbon {
   background-color: #eee;
-  height: 3rem;
+  height: 2.5rem;
   border-bottom: 1px solid #CDCDCD;
   box-shadow: 0 0.416em 0.416em -0.416em gray;
   display: flex;
@@ -207,7 +230,7 @@ input[type="date" i] {
 }
 .ribbon h3 {
   padding: .8rem;
-  font-size: 1.2rem;
+  font-size: 12.8px;
   font-weight: bold;
   color: #616161;
 }
@@ -225,7 +248,7 @@ input[type="date" i] {
   /*width: 16.25rem;*/
   height: 3em;
   background-color: #fff;
-  font-size: 1.35em;
+  font-size: 12.8px;
   font-weight: 600;
   border: 1px solid #eee;
   border-bottom: none;
@@ -239,7 +262,7 @@ input[type="date" i] {
   cursor: pointer;
 }
 .ribbon .tabs {
-  margin-right: 25em;
+  margin-right: 40em;
 }
 .ribbon .tabs li p {
   white-space: nowrap;
@@ -286,6 +309,13 @@ input[type="date" i] {
 /*  .Table-section */
 .table-section {
    margin-top: 2rem;
+}
+.table-hover tbody tr{
+  border: 3px solid transparent;
+}
+.table-hover tbody tr:hover {
+  border-left-color: green;
+  cursor: pointer;
 }
 .table-section .thead th:last-child{
    text-align: right;
@@ -340,18 +370,21 @@ input[type="date" i] {
 }
 .table-section .fa-check-circle:hover {
   color:#0fe057;
+  cursor: pointer;
 }
  .table-section .fa-exclamation-triangle {
   color: #E17068;
 }
 .table-section .fa-exclamation-triangle:hover {
     color: #ed5247;
+    cursor: pointer;
 }
 .table-section .fa-phone {
    color: #F1F1F1;
 }
  .table-section .fa-phone:hover {
   color: #292B2C;
+  cursor: pointer;
 }
 .table-section .fa-hourglass-o {
    color: #BDBDBD;
@@ -367,4 +400,7 @@ input[type="date" i] {
 }
 .table-section .form-control {
   padding: .25rem .55rem;
+}
+.table-section .table td, .table th {
+    padding: .5rem;
 }

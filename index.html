@@ -22,10 +22,12 @@
               <label for="data-od" class="col-3 col-form-label">Délka od </label>
               <label for="data-od" class="col-1 col-form-label"><span>do</span></label>
               <div class="col-4">
-                <input class="form-control" type="date" value="2017-04-15" id="zacatek">
+                <input class="form-control" type="text" value="2017-04-15" id="zacatek">
+                <span class="fa fa-calendar-minus-o calendar-icon"></span>
               </div>
               <div class="col-4">
-                <input class="form-control" type="date" value="Datum" id="navrat">
+                <input class="form-control" type="text" value="Datum" id="navrat">
+                <span class="fa fa-calendar-minus-o calendar-icon"></span>
               </div>
               <div class="col-2">
                 <input class="form-control" type="number" value="1" id="data-od">
@@ -48,7 +50,7 @@
                 <input class="form-control text-right" type="text" placeholder="%" id="sleva">
               </div>
               <div class="col-4 radio-btns">
-                <div class="form-check">
+                <div class="form-check text-left">
                   <label class="form-check-label">
                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                     Vsechny
@@ -83,7 +85,7 @@
               <div class="col-2">
               </div>
               <div class="col-6">
-                <label class="col-12 col-form-label"><a href="">Podporované kanceláře</a></label>
+                <label class="col-12 col-form-label text-right"><a href="">Podporované kanceláře</a></label>
               </div>
               <label for="dospelit" class="col-4 col-form-label muted">Dospělých</label>
               <label for="deti" class="col-4 col-form-label muted">Děti</label>
@@ -164,11 +166,11 @@
                 </div>
                 <div class="col-4">
                   <select class="form-control">
-                    <option>4 <i class="fa fa-star" aria-hidden="true"></i> a 5 <i class="fa fa-star" aria-hidden="true"></i></option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option>4 &#xf005; a 5 &#xf005;</option>
+                    <option>2 &#xf005;</option>
+                    <option>3 &#xf005;</option>
+                    <option>4 &#xf005;</option>
+                    <option>5 &#xf005;</option>
                   </select>
                 </div>
                 <div class="col-4">
@@ -262,7 +264,7 @@
                   </select>
                 </div>
                 <div class="col-6">
-                  <input class="form-control" type="date" value="" id="cislo-terminu">
+                  <input class="form-control" type="text" value="" id="cislo-terminu">
                 </div>
               </div>
             </div>
@@ -736,6 +738,7 @@
           if(this.checked) {
               $(this).parents('tr').toggleClass("selected");
               $('.table td').css("padding", '0.5rem');
+              
           } else {
             $(this).parents('tr').toggleClass("selected");
           }
